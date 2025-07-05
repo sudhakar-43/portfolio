@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Smith - Data Scientist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">JS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">John Smith</h1>
+                        <p class="hero-subtitle">Data Scientist</p>
+                        <p class="hero-description">
+                            Turning complex data into actionable insights through machine learning and statistical analysis.
+                            Passionate about solving real-world problems with data-driven solutions.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">View Projects</a>
+                            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-card">
+                            <div class="profile-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="John Smith" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Data Scientist with an M.Sc. in Computer Science and 4+ years of experience 
+                            transforming complex datasets into strategic business insights. Specialized in 
+                            machine learning, predictive analytics, and data visualization.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>50+ ML Models Deployed</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-database"></i>
+                                <span>10TB+ Data Processed</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-users"></i>
+                                <span>Cross-functional Teams</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">R</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Machine Learning</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">scikit-learn</span>
+                            <span class="skill-item">TensorFlow</span>
+                            <span class="skill-item">PyTorch</span>
+                            <span class="skill-item">XGBoost</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Analysis</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Pandas</span>
+                            <span class="skill-item">NumPy</span>
+                            <span class="skill-item">Scipy</span>
+                            <span class="skill-item">Statsmodels</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Visualization</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">Matplotlib</span>
+                            <span class="skill-item">Seaborn</span>
+                            <span class="skill-item">Plotly</span>
+                            <span class="skill-item">Tableau</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & Tools</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">AWS</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">Jupyter</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <div class="skill-items">
+                            <span class="skill-item">PostgreSQL</span>
+                            <span class="skill-item">MongoDB</span>
+                            <span class="skill-item">Redis</span>
+                            <span class="skill-item">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Predictive Analytics Dashboard" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Customer Churn Prediction</h3>
+                            <p>Built an ML pipeline to predict customer churn with 89% accuracy, helping reduce churn by 15% and saving $2M annually.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>XGBoost</span>
+                                <span>AWS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Market Analysis" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Real-time Fraud Detection</h3>
+                            <p>Developed a real-time fraud detection system processing 10K+ transactions/sec with 0.02% false positive rate.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Kafka</span>
+                                <span>TensorFlow</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-file-alt"></i> Paper
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop" alt="NLP Analysis" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Sentiment Analysis Platform</h3>
+                            <p>Created an NLP platform analyzing 1M+ social media posts daily, providing insights for brand management strategies.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>BERT</span>
+                                <span>Docker</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=400&fit=crop" alt="Healthcare Analytics" />
+                        </div>
+                        <div class="project-content">
+                            <h3>Medical Image Classification</h3>
+                            <p>Developed a CNN model for detecting pneumonia in chest X-rays with 94% accuracy, assisting radiologists in diagnosis.</p>
+                            <div class="project-tech">
+                                <span>PyTorch</span>
+                                <span>OpenCV</span>
+                                <span>Flask</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-file-alt"></i> Research
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Experience & Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Senior Data Scientist</h3>
+                            <p class="company">TechCorp Solutions</p>
+                            <p class="duration">2022 - Present</p>
+                            <p class="description">Leading ML initiatives for customer analytics and predictive modeling</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Data Scientist</h3>
+                            <p class="company">DataVision Inc.</p>
+                            <p class="duration">2020 - 2022</p>
+                            <p class="description">Developed fraud detection systems and recommendation engines</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>M.Sc. Computer Science</h3>
+                            <p class="company">Stanford University</p>
+                            <p class="duration">2018 - 2020</p>
+                            <p class="description">Focus on Machine Learning and Artificial Intelligence</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>B.Sc. Mathematics</h3>
+                            <p class="company">UC Berkeley</p>
+                            <p class="duration">2014 - 2018</p>
+                            <p class="description">Concentration in Statistics and Applied Mathematics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-content">
+                    <p class="contact-description">
+                        I'm always interested in discussing new opportunities, collaborations, or data science challenges.
+                        Feel free to reach out!
+                    </p>
+                    <div class="contact-info">
+                        <a href="mailto:john.smith@example.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>john.smith@example.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/johnsmith" class="contact-item" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/johnsmith" class="contact-item" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 John Smith. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
