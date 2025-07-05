@@ -344,3 +344,80 @@ h6 {
   display: flex;
   gap: 1rem;
 }
+
+/* ============================================================
+   Timeline (Experience & Education)
+   ============================================================ */
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--accent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0.4em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.timeline-date {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* ============================================================
+   Contact Section
+   ============================================================ */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-email a {
+  color: var(--text);
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(1) contrast(1) brightness(0.95);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+[data-theme='dark'] .social-link img {
+  filter: grayscale(1) contrast(1) brightness(1.2);
+}
+
+.social-link img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
