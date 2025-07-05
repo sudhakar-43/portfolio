@@ -218,3 +218,129 @@ h6 {
   font-size: 0.9rem;
   color: var(--text);
 }
+
+/* ============================================================
+   Projects Grid & Cards
+   ============================================================ */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--bg-alt);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card h3 {
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+
+.project-card p {
+  margin: 0 1rem 1.5rem;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+/* Buttons */
+.button-primary,
+.button-outline {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.button-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: 2px solid var(--accent);
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.button-outline:hover,
+.button-outline:focus {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.modal.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  background-color: var(--bg);
+  border-radius: 8px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1.25rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.modal-links {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1rem;
+}

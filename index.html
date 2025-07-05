@@ -82,7 +82,66 @@
       <section id="projects" class="section">
         <div class="container">
           <h2>Projects</h2>
-          <!-- Projects overview placeholder -->
+          <div class="projects-grid">
+            <article class="project-card">
+              <img src="https://via.placeholder.com/400x225?text=Project+1" alt="Screenshot of Project 1" />
+              <h3>Diabetes Progression Prediction</h3>
+              <p>Regression model with XGBoost forecasting disease progression.</p>
+              <button class="button-primary open-modal" data-modal="modal-proj1">View</button>
+            </article>
+            <article class="project-card">
+              <img src="https://via.placeholder.com/400x225?text=Project+2" alt="Screenshot of Project 2" />
+              <h3>Customer Churn Dashboard</h3>
+              <p>Interactive dashboard revealing churn drivers for telecom clients.</p>
+              <button class="button-primary open-modal" data-modal="modal-proj2">View</button>
+            </article>
+            <article class="project-card">
+              <img src="https://via.placeholder.com/400x225?text=Project+3" alt="Screenshot of Project 3" />
+              <h3>NLP Sentiment Analyzer</h3>
+              <p>BERT-based classifier for real-time product review sentiment.</p>
+              <button class="button-primary open-modal" data-modal="modal-proj3">View</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- Project Detail Modals -->
+        <div id="modal-proj1" class="modal" aria-hidden="true">
+          <div class="modal-dialog">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <img src="https://via.placeholder.com/600x338?text=Project+1" alt="Project 1 larger screenshot" class="modal-img" />
+            <h3>Diabetes Progression Prediction</h3>
+            <p>Problem: Early prediction of diabetes progression helps clinicians adjust treatment plans. This project leverages electronic health record data and XGBoost to forecast disease progression, achieving a 15% RMSE reduction over baseline models.</p>
+            <div class="modal-links">
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Code</a>
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Blog Post</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-proj2" class="modal" aria-hidden="true">
+          <div class="modal-dialog">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <img src="https://via.placeholder.com/600x338?text=Project+2" alt="Project 2 larger screenshot" class="modal-img" />
+            <h3>Customer Churn Dashboard</h3>
+            <p>Problem: Telecom operators need quick insights into churn risk. Built a lightweight web dashboard (Plotly Dash) highlighting churn drivers and potential retention strategies, cutting analysis time from hours to minutes.</p>
+            <div class="modal-links">
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Code</a>
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Blog Post</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-proj3" class="modal" aria-hidden="true">
+          <div class="modal-dialog">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <img src="https://via.placeholder.com/600x338?text=Project+3" alt="Project 3 larger screenshot" class="modal-img" />
+            <h3>NLP Sentiment Analyzer</h3>
+            <p>Problem: Companies need real-time monitoring of customer sentiment. Implemented a BERT-based classifier deployed via FastAPI achieving 92% F1-score on unseen product reviews.</p>
+            <div class="modal-links">
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Code</a>
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Blog Post</a>
+            </div>
+          </div>
         </div>
       </section>
 
