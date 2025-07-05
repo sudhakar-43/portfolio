@@ -150,3 +150,71 @@ h6 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ============================================================
+   About Section
+   ============================================================ */
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1 1 260px;
+}
+
+.tagline {
+  font-size: 1.125rem;
+  max-width: 42ch;
+}
+
+/* ============================================================
+   Skills Grid
+   ============================================================ */
+.skills-grid {
+  list-style: none;
+  display: grid;
+  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  margin-top: 2rem;
+}
+
+.skill-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-item img {
+  width: 48px;
+  height: 48px;
+  filter: grayscale(1) contrast(1) brightness(0.95);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+[data-theme='dark'] .skill-item img {
+  filter: grayscale(1) contrast(1) brightness(1.2);
+}
+
+.skill-item img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+.skill-item span {
+  font-size: 0.9rem;
+  color: var(--text);
+}
