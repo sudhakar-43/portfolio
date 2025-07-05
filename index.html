@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Your&nbsp;Name</h1>
+        <nav class="main-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section">
+        <div class="container about-wrapper">
+          <img src="https://via.placeholder.com/160" alt="Profile photo" class="avatar" />
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p class="tagline">Data Scientist passionate about turning healthcare data into actionable insights.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <h2>Skills & Technologies</h2>
+          <ul class="skills-grid">
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" />
+              <span>Python</span>
+            </li>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas logo" />
+              <span>Pandas</span>
+            </li>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy logo" />
+              <span>NumPy</span>
+            </li>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow logo" />
+              <span>TensorFlow</span>
+            </li>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg" alt="scikit-learn logo" />
+              <span>scikit-learn</span>
+            </li>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQL" />
+              <span>SQL</span>
+            </li>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+              <span>Git</span>
+            </li>
+            <li class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+              <span>Linux</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <img src="https://via.placeholder.com/400x225?text=Project+1" alt="Screenshot of Project 1" />
+              <h3>Diabetes Progression Prediction</h3>
+              <p>Regression model with XGBoost forecasting disease progression.</p>
+              <button class="button-primary open-modal" data-modal="modal-proj1">View</button>
+            </article>
+            <article class="project-card">
+              <img src="https://via.placeholder.com/400x225?text=Project+2" alt="Screenshot of Project 2" />
+              <h3>Customer Churn Dashboard</h3>
+              <p>Interactive dashboard revealing churn drivers for telecom clients.</p>
+              <button class="button-primary open-modal" data-modal="modal-proj2">View</button>
+            </article>
+            <article class="project-card">
+              <img src="https://via.placeholder.com/400x225?text=Project+3" alt="Screenshot of Project 3" />
+              <h3>NLP Sentiment Analyzer</h3>
+              <p>BERT-based classifier for real-time product review sentiment.</p>
+              <button class="button-primary open-modal" data-modal="modal-proj3">View</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- Project Detail Modals -->
+        <div id="modal-proj1" class="modal" aria-hidden="true">
+          <div class="modal-dialog">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <img src="https://via.placeholder.com/600x338?text=Project+1" alt="Project 1 larger screenshot" class="modal-img" />
+            <h3>Diabetes Progression Prediction</h3>
+            <p>Problem: Early prediction of diabetes progression helps clinicians adjust treatment plans. This project leverages electronic health record data and XGBoost to forecast disease progression, achieving a 15% RMSE reduction over baseline models.</p>
+            <div class="modal-links">
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Code</a>
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Blog Post</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-proj2" class="modal" aria-hidden="true">
+          <div class="modal-dialog">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <img src="https://via.placeholder.com/600x338?text=Project+2" alt="Project 2 larger screenshot" class="modal-img" />
+            <h3>Customer Churn Dashboard</h3>
+            <p>Problem: Telecom operators need quick insights into churn risk. Built a lightweight web dashboard (Plotly Dash) highlighting churn drivers and potential retention strategies, cutting analysis time from hours to minutes.</p>
+            <div class="modal-links">
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Code</a>
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Blog Post</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-proj3" class="modal" aria-hidden="true">
+          <div class="modal-dialog">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <img src="https://via.placeholder.com/600x338?text=Project+3" alt="Project 3 larger screenshot" class="modal-img" />
+            <h3>NLP Sentiment Analyzer</h3>
+            <p>Problem: Companies need real-time monitoring of customer sentiment. Implemented a BERT-based classifier deployed via FastAPI achieving 92% F1-score on unseen product reviews.</p>
+            <div class="modal-links">
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Code</a>
+              <a href="#" class="button-outline" target="_blank" rel="noopener">Blog Post</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-alt">
+        <div class="container">
+          <h2>Experience & Education</h2>
+          <ul class="timeline">
+            <li class="timeline-item">
+              <span class="timeline-date">2019–2022</span>
+              <span class="timeline-content"><strong>Data Analyst</strong> · XYZ Corp.</span>
+            </li>
+            <li class="timeline-item">
+              <span class="timeline-date">2015–2019</span>
+              <span class="timeline-content"><strong>M.Sc. in Data Science</strong> · University ABC</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <div class="contact-wrapper">
+            <p class="contact-email">✉ <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+            <div class="contact-links">
+              <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" alt="LinkedIn logo" />
+              </a>
+              <a href="#" target="_blank" class="social-link" aria-label="GitHub">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

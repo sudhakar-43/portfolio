@@ -1,0 +1,423 @@
+/* ============================================================
+   Base Theme Variables
+   ============================================================ */
+:root[data-theme='light'] {
+  --bg: #f8f9fa;
+  --bg-alt: #ffffff;
+  --text: #111111;
+  --accent: #0ba5a4;
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+:root[data-theme='dark'] {
+  --bg: #0e1a24;
+  --bg-alt: #152634;
+  --text: #f2f7fa;
+  --accent: #0ba5a4;
+  --header-bg: rgba(14, 26, 36, 0.9);
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================================
+   Reset & Base Styles
+   ============================================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4rem 0;
+  background-color: var(--bg);
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 0.75em;
+  line-height: 1.2;
+}
+
+/* ============================================================
+   Header & Navigation
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--accent);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--text);
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Smooth reveal on scroll (optional) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   About Section
+   ============================================================ */
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1 1 260px;
+}
+
+.tagline {
+  font-size: 1.125rem;
+  max-width: 42ch;
+}
+
+/* ============================================================
+   Skills Grid
+   ============================================================ */
+.skills-grid {
+  list-style: none;
+  display: grid;
+  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  margin-top: 2rem;
+}
+
+.skill-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-item img {
+  width: 48px;
+  height: 48px;
+  filter: grayscale(1) contrast(1) brightness(0.95);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+[data-theme='dark'] .skill-item img {
+  filter: grayscale(1) contrast(1) brightness(1.2);
+}
+
+.skill-item img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+.skill-item span {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* ============================================================
+   Projects Grid & Cards
+   ============================================================ */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--bg-alt);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card h3 {
+  margin: 1rem;
+  font-size: 1.1rem;
+}
+
+.project-card p {
+  margin: 0 1rem 1.5rem;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+/* Buttons */
+.button-primary,
+.button-outline {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.button-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: 2px solid var(--accent);
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.button-outline:hover,
+.button-outline:focus {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.modal.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-dialog {
+  background-color: var(--bg);
+  border-radius: 8px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1.25rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.modal-links {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* ============================================================
+   Timeline (Experience & Education)
+   ============================================================ */
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--accent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0.4em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.timeline-date {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+/* ============================================================
+   Contact Section
+   ============================================================ */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-email a {
+  color: var(--text);
+}
+
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(1) contrast(1) brightness(0.95);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+[data-theme='dark'] .social-link img {
+  filter: grayscale(1) contrast(1) brightness(1.2);
+}
+
+.social-link img:hover {
+  filter: none;
+  transform: scale(1.1);
+}
