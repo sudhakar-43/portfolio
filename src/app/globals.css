@@ -1,26 +1,105 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-background: #FBFEFB; /* Off-white / pale minty white */
+  --color-foreground: #4A3B32; /* Soft dark charcoal/brown */
+  
+  --color-surface: #FFFFFF;    /* Clean white for cards */
+  --color-surface-border: #EFE5DC; /* Cream / light beige border */
+  
+  --color-primary-accent: #D0B8AC; /* Warm pastel peach/beige */
+  --color-secondary-accent: #F3D8C7; /* Lighter peach */
+  
+  --color-text-secondary: #8B7A70; /* Soft readable secondary text */
+  
+  --font-sans: var(--font-outfit);
+  --font-serif: var(--font-playfair);
+  
+  --animate-marquee: marquee 30s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 }
 
+:root {
+  color-scheme: light;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif), serif;
+}
+
+@utility glass {
+  background-color: rgba(251, 254, 251, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+@utility bento-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+@utility bento-card-hover {
+  transform: scale(1.02);
+  border-color: var(--color-primary-accent);
+  box-shadow: 0 10px 30px -5px rgba(208, 184, 172, 0.2);
+}
+
+.mask-horizontal-fades {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+@keyframes slow-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes mesh-drift {
+  0% { transform: scale(1) translate(0px, 0px); }
+  33% { transform: scale(1.1) translate(-40px, -20px); }
+  66% { transform: scale(1.05) translate(20px, 40px); }
+  100% { transform: scale(1) translate(0px, 0px); }
+}
+
+@utility bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, var(--color-primary-accent) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-primary-accent) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+@utility animate-mesh {
+  animation: mesh-drift 45s ease-in-out infinite alternate;
+}
+
+@utility animate-slow-spin {
+  animation: slow-rotate 120s linear infinite;
+  will-change: transform;
 }
