@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/kamikaze');
 @import "tailwindcss";
 
 @theme inline {
@@ -102,4 +103,42 @@ h1, h2, h3, h4, .font-serif {
 @utility animate-slow-spin {
   animation: slow-rotate 120s linear infinite;
   will-change: transform;
+}
+
+@keyframes ink-reveal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    opacity: 0;
+    filter: blur(4px);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@utility font-brush {
+  font-family: 'Kamikaze', sans-serif;
+}
+
+@utility animate-ink-brush {
+  animation: ink-reveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  display: inline-block;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate(0.0deg) }
+  100% { transform: rotate(0.0deg) }
+}
+
+@utility animate-wave {
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
 }
